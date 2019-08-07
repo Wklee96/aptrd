@@ -15,11 +15,9 @@
       s.parentNode.insertBefore(t, s)
     }(window, document, 'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '453560838771308'); 
+    fbq('init', '712073742566133'); 
     fbq('track', 'Purchase', {currency: "USD", value: 100.00});
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=<%= pixelId %>&ev=PageView&noscript=1" /></noscript>
   <!-- End Facebook Pixel Code -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -28,7 +26,7 @@
 
 <body>
   <p>Hold Tight - Your page is loading...</p>
-  <p>Click <a href='<%= redirectLink %>'>here</a> if redirect takes too long.</p>
+  <p>Click <a href='https://awesomebacker.typeform.com/to/p7RXl2'>here</a> if redirect takes too long.</p>
 
   <img id="pixelLoad" src="https://www.facebook.com/tr/">
 
@@ -38,7 +36,7 @@
       {
           $("#pixelLoad").imagesLoaded().done(function(inst)
           {
-              setTimeout(function(){ window.location.href='#'; }, 2000);
+              setTimeout(function(){ window.location.href='https://awesomebacker.typeform.com/to/p7RXl2'; }, 2000);
           });
       });
   </script>
