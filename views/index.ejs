@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = false;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '453560838771308'); 
+    fbq('track', 'Purchase', {currency: "USD", value: 100.00});
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=<%= pixelId %>&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+</head>
+
+<body>
+  <p>Hold Tight - Your page is loading...</p>
+  <p>Click <a href='<%= redirectLink %>'>here</a> if redirect takes too long.</p>
+
+  <img id="pixelLoad" src="https://www.facebook.com/tr/">
+
+  <!-- Script to set timeout to 1500ms before redirecting -->
+  <script>
+      $(function()
+      {
+          $("#pixelLoad").imagesLoaded().done(function(inst)
+          {
+              setTimeout(function(){ window.location.href='#'; }, 2000);
+          });
+      });
+  </script>
+  
+</body>
+
+</html>
